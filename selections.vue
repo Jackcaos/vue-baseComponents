@@ -50,11 +50,13 @@ export default {
 
 <style scoped>
 .selection-component {
-      position: relative;
-      left:100px;
+    /* 设置好总的布局模式inline-block */
+      /* position: relative;
+      left:100px; */
       display: inline-block;
     }
     .selection-show {
+      /* 设置好整个框的样子，height */
       border: 1px solid #e3e3e3;
       padding: 0 20px 0 10px;
       display: inline-block;
@@ -66,6 +68,7 @@ export default {
     }
 
     .selection-show .arrow {
+     /* 设置箭头的样式 */
       display: inline-block;
       border-left: 4px solid transparent;
       border-right: 4px solid transparent;
@@ -78,6 +81,7 @@ export default {
       vertical-align: middle;
     }
     .selection-list {
+        /* 将下拉列表绝对定位加在输入框下面 */
       display: inline-block;
       position: absolute;
       left: 0;
@@ -89,11 +93,12 @@ export default {
       z-index: 5;
     }
     .selection-list ul {
-      padding: 0px;
+        /* 去掉ul的padding和margin */
+     padding: 0px;
      margin:0px;
-      /*width:106px;*/
     }
     .selection-list li {
+        /* 设置相关选项的布局，边界，过多的文字进行隐藏 */
       padding: 5px 5px 5px 10px;
       float: left;
       border-left: 1px solid #e3e3e3;

@@ -50,6 +50,7 @@ export default {
   display: inline-block;
 }
 .chooser-list li{
+    /* 在li中添加choose的布局格式，边距大小，字体的显示格式的padding，及鼠标的样式 */
   display: inline-block;
   border: 1px solid #e3e3e3;
   height: 25px;
@@ -62,6 +63,7 @@ export default {
   cursor: pointer;
 }
 .chooser-list li.active {
+    /* 展示点击完后的样式 */
   border-color: #4fc08d;
   background: #4fc08d;
   color: #fff;

@@ -58,6 +58,7 @@ export default {
 </script>
 
 <style scoped>
+/* 这个可以参考choose的布局 */
 .chooser-component {
   position: relative;
   display: inline-block;
