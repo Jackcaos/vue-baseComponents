@@ -1,0 +1,69 @@
+<template>
+    <div class="chooser-component">
+        <div>
+        <ul class="chooser-list">
+          <li
+          v-for="(item, index) in selections"
+          @click="chosenSelection(index)"
+          :title="item.label"
+          :class="{active:index === nowIndex}" :key="item.id"
+          >{{ item.label }}</li>
+        </ul>
+      </div>
+    </div>
+</template>
+
+<script>
+export default {
+  data(){
+    return {
+        selections: [
+        {
+          label: '大一',
+          value: 0
+        },
+        {
+          label: '大二',
+          value: 1
+        },
+        {
+          label: '大三',
+          value: 2
+        }
+      ],
+      nowIndex: 0
+    }
+  },
+  methods: {
+    chosenSelection (index) {
+      this.nowIndex = index
+    //   this.$emit('on-change', this.selections[index])
+    }
+  }
+}
+</script>
+
+<style scoped>
+.chooser-component {  
+    /* 记住整体的布局应该使用inline-block */
+  position: relative;
+  display: inline-block;
+}
+.chooser-list li{
+  display: inline-block;
+  border: 1px solid #e3e3e3;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 8px;
+  /* margin-top:5px; */
+  margin-right: 5px;
+  border-radius: 3px;
+  text-align: center;
+  cursor: pointer;
+}
+.chooser-list li.active {
+  border-color: #4fc08d;
+  background: #4fc08d;
+  color: #fff;
+}
+</style>
