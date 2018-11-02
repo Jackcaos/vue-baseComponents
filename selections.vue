@@ -14,25 +14,34 @@
 </template>
 
 <script>
-export default {
-  data () {
+export default { 
+  props:{
+    selections:{
+        type:Array,
+        default:{
+            label:'test',
+            value:0
+        }
+    }
+  },
+ data () {
     return {
       isDrop: false,
       nowIndex: 0,
-       selections: [
-        {
-          label: '1',
-          value: 0
-        },
-        {
-          label: '大二',
-          value: 1
-        },
-        {
-          label: '大三',
-          value: 2
-        }
-      ]
+    //   selections:[
+    //     {
+    //       label:'普通版',
+    //       value:0
+    //     },
+    //     {
+    //       label:'高级版',
+    //       value:1
+    //     },
+    //     {
+    //       label:'专家版',
+    //       value:2
+    //     }
+    //   ]
     }
   },
   methods: {
@@ -42,7 +51,7 @@ export default {
     chooseSelection (index) {
       this.nowIndex = index
       this.isDrop = false
-    //   this.$emit('on-change', this.selections[this.nowIndex])
+      this.$emit('on-change', this.selections[this.nowIndex])
     }
   }
 }
@@ -50,9 +59,8 @@ export default {
 
 <style scoped>
 .selection-component {
-    /* 设置好总的布局模式inline-block */
-      /* position: relative;
-      left:100px; */
+    /* 设置好总的布局模式inline-block */ 
+    position: relative;
       display: inline-block;
     }
     .selection-show {

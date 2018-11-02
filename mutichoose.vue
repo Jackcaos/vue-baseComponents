@@ -16,23 +16,32 @@
 <script>
 import _ from 'lodash'
 export default {
+  props:{
+    selections:{
+        type:Array,
+        default:{
+            label:'test',
+            value:0
+        }
+    }
+  },
   data () {
     return {
       nowIndexes: [0],
-       selections: [
-        {
-          label: '大一',
-          value: 0
-        },
-        {
-          label: '大二',
-          value: 1
-        },
-        {
-          label: '大三',
-          value: 2
-        }
-      ]
+    //    selections: [
+    //     {
+    //       label: '大一',
+    //       value: 0
+    //     },
+    //     {
+    //       label: '大二',
+    //       value: 1
+    //     },
+    //     {
+    //       label: '大三',
+    //       value: 2
+    //     }
+    //   ]
     }
   },
   methods: {
@@ -69,6 +78,7 @@ export default {
   height: 25px;
   line-height: 25px;
   padding: 0 8px;
+  margin-top: 10px;
   margin-right: 5px;
   border-radius: 3px;
   text-align: center;

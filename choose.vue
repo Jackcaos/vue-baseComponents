@@ -15,22 +15,18 @@
 
 <script>
 export default {
+    props:{
+        selections:{
+            type:Array,
+            default:{
+                label:'大一',
+                value:0
+            }
+        }
+    },
   data(){
     return {
-        selections: [
-        {
-          label: '大一',
-          value: 0
-        },
-        {
-          label: '大二',
-          value: 1
-        },
-        {
-          label: '大三',
-          value: 2
-        }
-      ],
+ 
       nowIndex: 0
     }
   },
